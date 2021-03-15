@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./download.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Encode Sans Expanded">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Micar 1.0.0</title>
+    <style>
+        * {
+            color: #f3f3f3;
+            background-color: #121212;
+        }
+
+        #headers {
+            border: 1px solid #ffffff;
+            text-align: center;
+            font-family: Roboto, Tahoma, Ubuntu;
+        }
+
+        textarea {
+            font-family: "Encode Sans Expanded", Consolas, monospace;
+            width: 33%;
+            max-width: 33%px;
+            min-width: 33%px;
+            height: 260px;
+            max-height: 400px;
+            min-height: 400px;
+            background-color: #e3e3e3;
+            color: #121212;
+        }
+
+        input {
+            background-color: #e3e3e3;
+            color: #121212;
+        }
+
+        #main-content {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="headers">
+        <h2>Micar</h2>
+        <h6><a href="https://www.github.com/moreavy/micar">Source Code</a> | <a
+                href="http://www.danml.com/download.html">download.js</a> | <a href="https://pages.github.com/">GitHub
+                Pages</a></h6>
+    </div>
+    <div id="main-content">
+        <div id="editor">
+            <br>
+            <label>File Name:</label>
+            <input id="fn" type="text" placeholder="File Name" />
+            <br><br>
+            <label>Code: </label>
+            <br>
+            <textarea id="code" placeholder="Code" contenteditable="true" spellcheck="false"></textarea>
+        </div>
+        <button class="btn btn-info"
+            onclick="download(document.getElementById('code').value, document.getElementById('fn').value, 'text/plain')">Save</button>
+    </div>
+</body>
+
+</html>
